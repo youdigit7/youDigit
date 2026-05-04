@@ -2,138 +2,338 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>youDigit | Innovative • Digital • Smart</title>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
-    <style>
-        /* Color Palette from your Profile Photo */
-        :root {
-            --deep-navy: #0a192f;   /* Background */
-            --electric-blue: #00d4ff; /* Accents & Glow */
-            --cyber-lime: #b6ff00;    /* Highlights */
-            --text-white: #e6f1ff;
-        }
-
-        body {
-            margin: 0;
-            font-family: 'Inter', sans-serif;
-            background-color: var(--deep-navy);
-            color: var(--text-white);
-            line-height: 1.6;
-        }
-
-        /* Hero Section */
-        header {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            background: radial-gradient(circle at center, #112240 0%, #0a192f 100%);
-            padding: 0 20px;
-        }
-
-        .logo-text {
-            font-size: 4rem;
-            font-weight: 700;
-            margin: 0;
-            background: linear-gradient(to right, var(--electric-blue), var(--cyber-lime));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .tagline {
-            font-size: 1.2rem;
-            letter-spacing: 4px;
-            margin-top: 10px;
-            color: var(--electric-blue);
-            text-transform: uppercase;
-        }
-
-        /* Features Section */
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            padding: 80px 10%;
-        }
-
-        .card {
-            background: #112240;
-            padding: 40px;
-            border-radius: 15px;
-            border-left: 4px solid var(--cyber-lime);
-            transition: transform 0.3s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-10px);
-            border-left-color: var(--electric-blue);
-        }
-
-        .card h3 {
-            color: var(--cyber-lime);
-            margin-top: 0;
-        }
-
-        /* Call to Action Button */
-        .cta-btn {
-            margin-top: 30px;
-            padding: 15px 40px;
-            font-weight: bold;
-            text-decoration: none;
-            color: var(--deep-navy);
-            background-color: var(--electric-blue);
-            border-radius: 50px;
-            transition: 0.3s;
-            box-shadow: 0 0 15px rgba(0, 212, 255, 0.4);
-        }
-
-        .cta-btn:hover {
-            background-color: var(--cyber-lime);
-            box-shadow: 0 0 20px rgba(182, 255, 0, 0.6);
-        }
-
-        footer {
-            text-align: center;
-            padding: 40px;
-            font-size: 0.9rem;
-            border-top: 1px solid #233554;
-        }
-    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>youDigit — Innovative Digital Smart Solutions</title>
+    <meta name="description"
+        content="youDigit builds custom web solutions designed for your business goals. Smart bridges between your physical business and the digital world." />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png"
+        href="../youDigit-main//assests//688151931_122094458079311105_3345895460060480333_n.jpg" />
 </head>
 
 <body>
 
-    <header>
-        <h1 class="logo-text">youDigit</h1>
-        <div class="tagline">Innovative • Digital • Smart</div>
-        <p style="max-width: 600px; margin-top: 20px;">Stop losing customers to the competition. We build smart digital assets that help you manage your business easily and grow your revenue.</p>
-        <a href="#contact" class="cta-btn">Digitize Your Business</a>
-    </header>
 
-    <section class="features">
-        <div class="card">
-            <h3>Gain Customers</h3>
-            <p>Professional, high-speed websites designed to turn visitors into loyal clients.</p>
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-close" id="mobileClose">✕</button>
+        <a href="#hero">Home</a>
+        <a href="#services">Services</a>
+        <a href="#why">Why Us</a>
+        <a href="#process">Process</a>
+        <a href="#tech">Tech</a>
+        <a href="#cta">Contact</a>
+    </div>
+
+
+    <nav id="navbar">
+        <a class="nav-logo" href="#hero">
+            <img src="assests/688151931_122094458079311105_3345895460060480333_n.jpg" alt="youDigit Logo" />
+            <span>you<em>Digit</em></span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#why">Why Us</a></li>
+            <li><a href="#process">Process</a></li>
+            <li><a href="#tech">Tech</a></li>
+            <li><a href="#cta">Contact</a></li>
+        </ul>
+        <a href="#cta" class="nav-cta">Get Started →</a>
+        <div class="hamburger" id="hamburger">
+            <span></span><span></span><span></span>
         </div>
-        <div class="card">
-            <h3>Smart Management</h3>
-            <p>Automate your daily tasks and manage your operations from anywhere with custom-built tools.</p>
+    </nav>
+
+
+    <section id="hero">
+        <div class="particles" id="particles"></div>
+        <div class="hero-bg"></div>
+        <div class="grid-lines"></div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="dot"></span> Innovative · Digital · Smart
+            </div>
+            <h1 class="hero-title">
+                Your Business Deserves<br />
+                <span class="line2 gradient-text" id="typewriter">Digital Presence</span>
+            </h1>
+            <p class="hero-sub">
+                We build custom web solutions designed specifically for your business goals — no generic templates, just
+                innovative engineering that delivers real results.
+            </p>
+            <div class="hero-btns">
+                <a href="#cta" class="btn-primary">Start Your Journey →</a>
+                <a href="#services" class="btn-outline">Explore Services</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-num" data-target="50" data-suffix="+">0+</span>
+                    <span class="stat-label">Projects Delivered</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-num" data-target="100" data-suffix="%">0%</span>
+                    <span class="stat-label">Client Satisfaction</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-num" data-target="3" data-suffix="x">0x</span>
+                    <span class="stat-label">Avg. Traffic Growth</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-num" data-target="24" data-suffix="/7">0/7</span>
+                    <span class="stat-label">Support Available</span>
+                </div>
+            </div>
         </div>
-        <div class="card">
-            <h3>Innovative Tech</h3>
-            <p>Leveraging React and Spring Boot to provide secure, scalable solutions that simple templates can't match.</p>
+    </section>
+
+
+    <section id="services">
+        <div class="center reveal">
+            <span class="section-tag">What We Build</span>
+            <h2 class="section-title">Our <span class="cyan-text">Services</span></h2>
+            <p class="section-sub">Everything your business needs to thrive in the digital world — built with precision
+                and passion.</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card reveal">
+                <div class="service-icon">🌐</div>
+                <h3>Custom Websites</h3>
+                <p>Stunning, fast, and SEO-optimized websites tailored to your brand identity. No templates — every
+                    pixel crafted for you.</p>
+            </div>
+            <div class="service-card reveal">
+                <div class="service-icon">📱</div>
+                <h3>Web Applications</h3>
+                <p>Powerful full-stack web apps using React and Spring Boot. Scalable, secure, and built to grow with
+                    your business.</p>
+            </div>
+            <div class="service-card reveal">
+                <div class="service-icon">🛒</div>
+                <h3>E-Commerce Solutions</h3>
+                <p>Complete online stores with payment integration, inventory management, and smooth customer
+                    experiences that convert.</p>
+            </div>
+            <div class="service-card reveal">
+                <div class="service-icon">📊</div>
+                <h3>Business Dashboards</h3>
+                <p>Track your operations in real-time. Manage everything from anywhere with intuitive, data-rich admin
+                    panels.</p>
+            </div>
+            <div class="service-card reveal">
+                <div class="service-icon">🔍</div>
+                <h3>SEO & Local Visibility</h3>
+                <p>Get found by thousands of local customers searching online every day. We make your business
+                    impossible to miss.</p>
+            </div>
+            <div class="service-card reveal">
+                <div class="service-icon">🤖</div>
+                <h3>Automation & Integrations</h3>
+                <p>Automate repetitive tasks and connect your tools. Work smarter, not harder — with smart workflows
+                    built just for you.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="why">
+        <div class="why-visual reveal">
+            <div class="why-circle">
+                <span class="ring-dot"></span>
+                <span class="ring-dot"></span>
+                <span class="ring-dot"></span>
+                <span class="ring-dot"></span>
+                <div class="why-inner-circle">
+                    <span class="big-num gradient-text">5★</span>
+                    <small>Average<br />Client Rating</small>
+                </div>
+            </div>
+        </div>
+        <div class="why-content reveal">
+            <span class="section-tag">Why youDigit</span>
+            <h2 class="section-title">The <span class="cyan-text">Smart Bridge</span><br />for Your Business</h2>
+            <p class="section-sub">We don't just build websites — we build digital growth engines.</p>
+            <ul class="why-list">
+                <li>
+                    <span class="why-icon">🎯</span>
+                    <div class="why-text">
+                        <h4>Gain More Customers</h4>
+                        <p>Be found by thousands of local clients searching online every day with our targeted digital
+                            strategies.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="why-icon">⚡</span>
+                    <div class="why-text">
+                        <h4>High Performance Apps</h4>
+                        <p>Built with React and Spring Boot — blazing fast, secure, and designed to scale with your
+                            business.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="why-icon">🛡️</span>
+                    <div class="why-text">
+                        <h4>Dedicated Support</h4>
+                        <p>We're with you every step of the way. 24/7 support, ongoing updates, and continuous
+                            improvements.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="why-icon">💡</span>
+                    <div class="why-text">
+                        <h4>Custom Built — Always</h4>
+                        <p>Your brand, your vision. Every project starts from scratch to perfectly match your unique
+                            goals.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+
+    <section id="process">
+        <div class="center reveal">
+            <span class="section-tag">How It Works</span>
+            <h2 class="section-title">Our <span class="green-text">Process</span></h2>
+            <p class="section-sub">A streamlined, transparent process from idea to launch.</p>
+        </div>
+        <div class="steps">
+            <div class="step reveal">
+                <div class="step-num">01</div>
+                <h4>Discovery</h4>
+                <p>We learn your business, goals, and target audience in depth.</p>
+                <div class="step-line"></div>
+            </div>
+            <div class="step reveal">
+                <div class="step-num">02</div>
+                <h4>Design</h4>
+                <p>We craft a stunning design tailored to your brand identity.</p>
+                <div class="step-line"></div>
+            </div>
+            <div class="step reveal">
+                <div class="step-num">03</div>
+                <h4>Develop</h4>
+                <p>Clean, fast, scalable code using modern tech stacks.</p>
+                <div class="step-line"></div>
+            </div>
+            <div class="step reveal">
+                <div class="step-num">04</div>
+                <h4>Launch</h4>
+                <p>We deploy, test, and make sure everything is perfect.</p>
+                <div class="step-line"></div>
+            </div>
+            <div class="step reveal">
+                <div class="step-num">05</div>
+                <h4>Grow</h4>
+                <p>Ongoing support, updates, and digital growth strategies.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="tech">
+        <div class="center reveal">
+            <span class="section-tag">Technology</span>
+            <h2 class="section-title">Built With <span class="cyan-text">Modern Tech</span></h2>
+            <p class="section-sub">We use industry-leading technologies to ensure your product is fast, scalable, and
+                future-proof.</p>
+        </div>
+        <div class="tech-grid reveal">
+            <div class="tech-badge"><span>⚛️</span> React</div>
+            <div class="tech-badge"><span>🍃</span> Spring Boot</div>
+            <div class="tech-badge"><span>🟨</span> JavaScript</div>
+            <div class="tech-badge"><span>🗄️</span> MySQL</div>
+            <div class="tech-badge"><span>🐳</span> Docker</div>
+            <div class="tech-badge"><span>☁️</span> AWS / Cloud</div>
+            <div class="tech-badge"><span>🔷</span> TypeScript</div>
+            <div class="tech-badge"><span>🔥</span> Node.js</div>
+            <div class="tech-badge"><span>🎨</span> Figma</div>
+            <div class="tech-badge"><span>🔀</span> REST APIs</div>
+            <div class="tech-badge"><span>🔐</span> JWT Auth</div>
+            <div class="tech-badge"><span>📦</span> MongoDB</div>
+        </div>
+    </section>
+
+
+    <section id="cta">
+        <div class="cta-box reveal">
+            <span class="section-tag">Get In Touch</span>
+            <h2>Let's Build Something <span class="gradient-text">Amazing Together</span></h2>
+            <p>Ready to take your business digital? Reach out to us through any of the channels below.</p>
+            <div class="contact-details">
+                <a href="mailto:youdigit7@gmail.com" class="contact-item">
+                    <span class="contact-icon">✉️</span>
+                    <span>youdigit7@gmail.com</span>
+                </a>
+                <a href="https://wa.me/94763071835" target="_blank" class="contact-item">
+                    <span class="contact-icon">💬</span>
+                    <span>+94 76 307 1835</span>
+                </a>
+                <a href="https://instagram.com/youdigit" target="_blank" class="contact-item">
+                    <span class="contact-icon">📸</span>
+                    <span>@youdigit</span>
+                </a>
+                <a href="https://facebook.com/youdigit" target="_blank" class="contact-item">
+                    <span class="contact-icon">📘</span>
+                    <span>youDigit on Facebook</span>
+                </a>
+            </div>
         </div>
     </section>
 
     <footer>
-        &copy; 2026 youDigit. All Rights Reserved.
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a class="nav-logo" href="#hero">
+                    <img src="assests/688151931_122094458079311105_3345895460060480333_n.jpg" alt="youDigit Logo"
+                        style="width:40px;height:40px;" />
+                    <span style="font-size:1.3rem;">you<em
+                            style="color:var(--cyan);font-style:normal;">Digit</em></span>
+                </a>
+                <p>The smart bridge between your physical business and the digital world. Innovative engineering that
+                    delivers results.</p>
+                <div class="social-links" style="margin-top:16px;">
+                    <a href="#" class="social-btn" title="Facebook">f</a>
+                    <a href="#" class="social-btn" title="Instagram">in</a>
+                    <a href="#" class="social-btn" title="LinkedIn">Li</a>
+                    <a href="#" class="social-btn" title="WhatsApp">W</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h5>Services</h5>
+                <ul>
+                    <li><a href="#services">Custom Websites</a></li>
+                    <li><a href="#services">Web Applications</a></li>
+                    <li><a href="#services">E-Commerce</a></li>
+                    <li><a href="#services">Dashboards</a></li>
+                    <li><a href="#services">SEO & Visibility</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Company</h5>
+                <ul>
+                    <li><a href="#why">About Us</a></li>
+                    <li><a href="#process">Our Process</a></li>
+                    <li><a href="#tech">Technology</a></li>
+                    <li><a href="#cta">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Connect</h5>
+                <ul>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                    <li><a href="mailto:youdigit7@gmail.com">Email Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 youDigit. All rights reserved. — #InnovativeDigitalSmart 🇱🇰</p>
+            <p style="color:var(--cyan); font-size:0.8rem;">Built with ❤️ in Sri Lanka</p>
+        </div>
     </footer>
 
+    <script src="main.js"></script>
 </body>
 
 </html>
