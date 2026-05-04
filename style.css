@@ -902,9 +902,15 @@ footer {
     justify-content: center;
     color: var(--gray);
     font-size: 1rem;
+    line-height: 0;
     text-decoration: none;
     transition: all 0.3s;
     cursor: pointer;
+}
+
+.social-btn svg {
+    fill: currentColor;
+    display: block;
 }
 
 .social-btn:hover {
