@@ -1004,23 +1004,72 @@ footer {
 }
 
 /* ── RESPONSIVE ── */
+
+/* ── Large Tablets (max 1024px) ── */
+@media (max-width: 1024px) {
+    nav {
+        padding: 14px 4%;
+    }
+
+    .nav-links {
+        gap: 22px;
+    }
+
+    #why {
+        gap: 50px;
+    }
+
+    .why-circle {
+        width: 300px;
+        height: 300px;
+    }
+
+    .why-inner-circle {
+        width: 210px;
+        height: 210px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+
+    .steps {
+        gap: 0;
+    }
+}
+
+/* ── Tablets (max 900px) ── */
 @media (max-width: 900px) {
     #why {
         grid-template-columns: 1fr;
-        gap: 50px;
+        gap: 40px;
+        text-align: center;
     }
 
     .why-visual {
         order: -1;
     }
 
+    .why-list li:hover {
+        transform: none;
+    }
+
     .footer-grid {
         grid-template-columns: 1fr 1fr;
     }
+
+    .services-grid {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+
+    section {
+        padding: 80px 5%;
+    }
 }
 
-@media (max-width: 640px) {
-
+/* ── Small Tablets / Large Phones (max 768px) ── */
+@media (max-width: 768px) {
     .nav-links,
     .nav-cta {
         display: none;
@@ -1030,34 +1079,56 @@ footer {
         display: flex;
     }
 
+    nav {
+        padding: 14px 5%;
+    }
+
+    #hero {
+        padding: 110px 5% 60px;
+    }
+
+    .hero-title {
+        font-size: clamp(2rem, 8vw, 3.2rem);
+    }
+
+    .hero-sub {
+        font-size: 1rem;
+    }
+
+    .hero-btns {
+        gap: 12px;
+    }
+
+    .btn-primary,
+    .btn-outline {
+        padding: 12px 28px;
+        font-size: 0.95rem;
+        width: 100%;
+        justify-content: center;
+    }
+
     .hero-stats {
-        gap: 28px;
+        gap: 24px;
+        margin-top: 50px;
     }
 
-    .cta-form {
+    .stat-num {
+        font-size: 1.8rem;
+    }
+
+    .steps {
         flex-direction: column;
-        border-radius: 16px;
+        align-items: center;
     }
 
-    .cta-form input {
-        border-radius: 50px;
+    .step {
+        min-width: unset;
+        max-width: 400px;
+        width: 100%;
     }
 
-    .cta-box {
-        padding: 40px 24px;
-    }
-
-    .footer-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .footer-bottom {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    #why {
-        padding: 60px 5%;
+    .step-line {
+        display: none;
     }
 
     .why-circle {
@@ -1066,11 +1137,218 @@ footer {
     }
 
     .why-inner-circle {
-        width: 180px;
-        height: 180px;
+        width: 185px;
+        height: 185px;
+    }
+
+    .section-title {
+        font-size: clamp(1.7rem, 5vw, 2.4rem);
+    }
+
+    .cta-box {
+        padding: 50px 28px;
+        border-radius: 20px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 28px;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+}
+
+/* ── Mobile Phones (max 640px) ── */
+@media (max-width: 640px) {
+    section {
+        padding: 70px 5%;
+    }
+
+    #hero {
+        padding: 100px 5% 50px;
+    }
+
+    .hero-title {
+        font-size: clamp(1.8rem, 9vw, 2.8rem);
+        margin-bottom: 18px;
+    }
+
+    .hero-sub {
+        font-size: 0.95rem;
+        margin-bottom: 28px;
+    }
+
+    .hero-stats {
+        gap: 18px;
+        flex-wrap: wrap;
+    }
+
+    .stat {
+        min-width: 80px;
+    }
+
+    .stat-num {
+        font-size: 1.6rem;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .service-card {
+        padding: 28px 22px;
+    }
+
+    .service-card:hover {
+        transform: none;
+    }
+
+    #why {
+        padding: 60px 5%;
+    }
+
+    .why-circle {
+        width: 230px;
+        height: 230px;
+    }
+
+    .why-inner-circle {
+        width: 160px;
+        height: 160px;
     }
 
     .why-inner-circle .big-num {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
+    }
+
+    .cta-box {
+        padding: 40px 20px;
+        border-radius: 16px;
+    }
+
+    .cta-box h2 {
+        font-size: clamp(1.5rem, 6vw, 2rem);
+    }
+
+    .contact-details {
+        gap: 12px;
+    }
+
+    .contact-item {
+        padding: 14px 20px;
+        font-size: 0.95rem;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 8px;
+    }
+
+    .tech-badge {
+        padding: 10px 18px;
+        font-size: 0.85rem;
+    }
+}
+
+/* ── Small Phones (max 480px) ── */
+@media (max-width: 480px) {
+    nav {
+        padding: 12px 4%;
+    }
+
+    .nav-logo img {
+        width: 36px;
+        height: 36px;
+    }
+
+    .nav-logo span {
+        font-size: 1.2rem;
+    }
+
+    .hero-badge {
+        font-size: 0.75rem;
+        padding: 6px 14px;
+    }
+
+    .hero-title {
+        font-size: clamp(1.6rem, 10vw, 2.4rem);
+    }
+
+    .hero-btns {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn-primary,
+    .btn-outline {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .hero-stats {
+        gap: 14px;
+    }
+
+    .stat-num {
+        font-size: 1.4rem;
+    }
+
+    .stat-label {
+        font-size: 0.75rem;
+    }
+
+    .why-circle {
+        width: 200px;
+        height: 200px;
+    }
+
+    .why-inner-circle {
+        width: 138px;
+        height: 138px;
+    }
+
+    .why-inner-circle .big-num {
+        font-size: 1.8rem;
+    }
+
+    .why-inner-circle small {
+        font-size: 0.7rem;
+    }
+
+    .step {
+        padding: 24px 16px;
+    }
+
+    .step-num {
+        width: 46px;
+        height: 46px;
+        font-size: 1rem;
+    }
+
+    .contact-item {
+        padding: 12px 16px;
+        font-size: 0.88rem;
+        gap: 12px;
+    }
+
+    .section-title {
+        font-size: clamp(1.5rem, 7vw, 2rem);
+    }
+}
+
+/* ── Disable neon cursor on touch devices ── */
+@media (hover: none) and (pointer: coarse) {
+    .cursor-trail-dot {
+        display: none !important;
     }
 }

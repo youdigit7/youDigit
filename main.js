@@ -97,32 +97,34 @@ document.getElementById('ctaForm').addEventListener('submit', (e) => {
     }, 3000);
 });
 
-// ── NEON CURSOR TRAIL ──
-const trail = [];
-const TRAIL_COUNT = 8;
-for (let i = 0; i < TRAIL_COUNT; i++) {
-    const dot = document.createElement('div');
-    const size = 6 - i * 0.5;
-    dot.style.cssText = `position:fixed;width:${size}px;height:${size}px;border-radius:50%;background:#00d4ff;pointer-events:none;z-index:99999;opacity:${(0.8 - i * 0.1).toFixed(2)};left:-20px;top:-20px;`;
-    document.body.appendChild(dot);
-    trail.push({ el: dot, x: -20, y: -20 });
-}
+// ── NEON CURSOR TRAIL (desktop only) ──
+if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    const trail = [];
+    const TRAIL_COUNT = 8;
+    for (let i = 0; i < TRAIL_COUNT; i++) {
+        const dot = document.createElement('div');
+        const size = 6 - i * 0.5;
+        dot.style.cssText = `position:fixed;width:${size}px;height:${size}px;border-radius:50%;background:#00d4ff;pointer-events:none;z-index:99999;opacity:${(0.8 - i * 0.1).toFixed(2)};left:-20px;top:-20px;`;
+        document.body.appendChild(dot);
+        trail.push({ el: dot, x: -20, y: -20 });
+    }
 
-let mouseX = 0, mouseY = 0;
-document.addEventListener('mousemove', e => { mouseX = e.clientX; mouseY = e.clientY; });
+    let mouseX = 0, mouseY = 0;
+    document.addEventListener('mousemove', e => { mouseX = e.clientX; mouseY = e.clientY; });
 
-function animateTrail() {
-    let x = mouseX, y = mouseY;
-    trail.forEach((dot, i) => {
-        dot.x += (x - dot.x) * (0.35 - i * 0.03);
-        dot.y += (y - dot.y) * (0.35 - i * 0.03);
-        dot.el.style.left = dot.x - 3 + 'px';
-        dot.el.style.top = dot.y - 3 + 'px';
-        x = dot.x; y = dot.y;
-    });
-    requestAnimationFrame(animateTrail);
+    function animateTrail() {
+        let x = mouseX, y = mouseY;
+        trail.forEach((dot, i) => {
+            dot.x += (x - dot.x) * (0.35 - i * 0.03);
+            dot.y += (y - dot.y) * (0.35 - i * 0.03);
+            dot.el.style.left = dot.x - 3 + 'px';
+            dot.el.style.top = dot.y - 3 + 'px';
+            x = dot.x; y = dot.y;
+        });
+        requestAnimationFrame(animateTrail);
+    }
+    animateTrail();
 }
-animateTrail();
 
 // ── ACTIVE NAV LINK ──
 const sections = document.querySelectorAll('section[id]');
