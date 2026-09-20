@@ -32,7 +32,7 @@
 | **Why Us** | Rotating circle visual + key differentiators (5★ rating, custom builds, 24/7 support) |
 | **Process** | 5-step workflow: Discovery → Design → Develop → Launch → Grow |
 | **Tech Stack** | 12 technology badges (React, Spring Boot, Node.js, Docker, AWS, etc.) |
-| **Contact / CTA** | Direct links to email, WhatsApp, Instagram, and Facebook |
+| **Contact / CTA** | Direct links to email, WhatsApp, and Facebook |
 | **Footer** | Brand column, services links, company links, and social connect |
 
 ### 📱 Responsive & Interactive
@@ -89,7 +89,6 @@ youdigit/
 |---|---|
 | ✉️ Email | [youdigit7@gmail.com](mailto:youdigit7@gmail.com) |
 | 💬 WhatsApp | [+94 76 307 1835](https://wa.me/94763071835) |
-| 📸 Instagram | [@youdigit](https://instagram.com/youdigit) |
 | 📘 Facebook | [youDigit on Facebook](https://facebook.com/youdigit) |
 
 ---
