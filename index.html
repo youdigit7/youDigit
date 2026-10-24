@@ -144,22 +144,49 @@
         <div class="particles" id="particles"></div>
         <div class="hero-bg"></div>
         <div class="grid-lines"></div>
-        <div class="hero-content">
-            <div class="hero-badge">
-                <span class="dot"></span> Innovative · Digital · Smart
+
+        <div class="hero-container">
+            <div class="hero-grid">
+                <!-- Left Column: Copy & CTAs -->
+                <div class="hero-text-col">
+                    <div class="hero-badge">
+                        <span class="dot"></span> Innovative · Digital · Smart
+                    </div>
+                    <h1 class="hero-title">
+                        Your Business Deserves<br />
+                        <span class="line2 gradient-text" id="typewriter">Digital Presence</span>
+                    </h1>
+                    <p class="hero-sub">
+                        We build custom web solutions designed specifically for your business goals — no generic templates, just
+                        innovative engineering that delivers real results.
+                    </p>
+                    <div class="hero-btns">
+                        <a href="#cta" class="btn-primary">Start Your Journey →</a>
+                        <a href="#services" class="btn-outline">Explore Services</a>
+                    </div>
+                </div>
+
+                <!-- Right Column: Interactive 3D Model -->
+                <div class="hero-3d-col">
+                    <div class="hero-3d-wrapper" id="hero3DWrapper">
+                        <div class="hero-3d-canvas-container" id="hero3DCanvas"></div>
+                        <div class="model-badge model-badge-top">
+                            <span class="badge-icon">⚡</span>
+                            <span>High-Speed Web Apps</span>
+                        </div>
+                        <div class="model-badge model-badge-bottom">
+                            <span class="badge-icon">🌐</span>
+                            <span>Smart Digital Solutions</span>
+                        </div>
+                        <div class="model-hint" id="modelHint">
+                            <span class="hint-icon">🔄</span>
+                            <span>Drag to rotate 3D core</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <h1 class="hero-title">
-                Your Business Deserves<br />
-                <span class="line2 gradient-text" id="typewriter">Digital Presence</span>
-            </h1>
-            <p class="hero-sub">
-                We build custom web solutions designed specifically for your business goals — no generic templates, just
-                innovative engineering that delivers real results.
-            </p>
-            <div class="hero-btns">
-                <a href="#cta" class="btn-primary">Start Your Journey →</a>
-                <a href="#services" class="btn-outline">Explore Services</a>
-            </div>
+
+            <!-- Full-width Centered Stats Below -->
             <div class="hero-stats">
                 <div class="stat">
                     <span class="stat-num" data-target="10" data-suffix="+">0+</span>
@@ -729,6 +756,7 @@
         </div>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="main.js"></script>
 </body>
 
