@@ -87,7 +87,7 @@ youdigit/
 
 | Channel | Details |
 |---|---|
-| ✉️ Email | [youdigit7@gmail.com](mailto:youdigit7@gmail.com) |
+| ✉️ Email | [info@youdigit.lk](mailto:info@youdigit.lk) |
 | 💬 WhatsApp | [+94 76 307 1835](https://wa.me/94763071835) |
 | 📘 Facebook | [youDigit on Facebook](https://facebook.com/youdigit) |
 
