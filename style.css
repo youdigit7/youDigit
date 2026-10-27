@@ -493,6 +493,10 @@ nav.scrolled {
 }
 
 .stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     flex: 1;
     padding: 28px 20px;
@@ -508,14 +512,18 @@ nav.scrolled {
     font-weight: 900;
     color: var(--navy-dark);
     display: block;
+    line-height: 1.2;
 }
 
 .stat-label {
+    display: block;
     font-size: 0.8rem;
     color: var(--text-light);
     font-weight: 500;
     margin-top: 4px;
     letter-spacing: 0.3px;
+    line-height: 1.4;
+    text-align: center;
 }
 
 /* ── SECTION COMMON ── */
@@ -1408,8 +1416,12 @@ footer {
     }
 
     .hero-stats {
-        gap: 24px;
+        gap: 0;
         margin-top: 50px;
+    }
+
+    .stat {
+        padding: 24px 12px;
     }
 
     .stat-num {
@@ -1481,12 +1493,24 @@ footer {
     }
 
     .hero-stats {
-        gap: 18px;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0;
     }
 
     .stat {
-        min-width: 80px;
+        min-width: 0;
+        padding: 22px 16px;
+        border-right: 1px solid rgba(10,31,60,0.08);
+        border-bottom: 1px solid rgba(10,31,60,0.08);
+    }
+
+    .stat:nth-child(2n) {
+        border-right: none;
+    }
+
+    .stat:nth-last-child(-n+2) {
+        border-bottom: none;
     }
 
     .stat-num {
@@ -1596,7 +1620,11 @@ footer {
     }
 
     .hero-stats {
-        gap: 14px;
+        gap: 0;
+    }
+
+    .stat {
+        padding: 20px 12px;
     }
 
     .stat-num {
